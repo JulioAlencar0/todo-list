@@ -44,6 +44,7 @@ b.forEach(function(button){
     })
 })
 
+//enter do teclado
 const input = document.querySelector('.input')
 
 input.addEventListener('keypress', function(e) {
