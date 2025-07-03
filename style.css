@@ -148,3 +148,26 @@ body {
     color: #928dab;
     font-size: 14px;
 }
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #262626;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #928dab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task p {
+  flex: 1;
+  color: #f2f2f2;
+}
