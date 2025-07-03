@@ -15,13 +15,20 @@ b.forEach(function(button){
 
 //adiciona a tarefa na tela e o botão de excluir
        let newTask = document.createElement('div')
-       newTask.textContent = text
+       newTask.classList.add('task')
+       let check = document.createElement('span')
+       check.classList.add('check')
+       let taskText = document.createElement('p')
+       taskText.textContent = text
        let bd = document.createElement('button')
        bd.textContent = 'Excluir'
+       
+       newTask.appendChild(check)
+       newTask.appendChild(taskText)
        newTask.appendChild(bd)
+       
        let list = document.querySelector('.task-list')
        list.appendChild(newTask)
-
 //contador muda quando adicionar a tarefa
        let c = document.querySelector('.tasks .counter')
        let tasks = document.querySelectorAll('.task-list div')
