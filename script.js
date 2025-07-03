@@ -44,3 +44,12 @@ b.forEach(function(button){
     })
 })
 
+const input = document.querySelector('.input')
+
+input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        document.querySelector('.btn-add').click()
+    }
+})
+
+
