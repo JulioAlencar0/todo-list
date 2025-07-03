@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@1,14..32,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--Cabeçalho-->
+    <div id="container">
+        <div class="logo-content">
+            <img class="logo" src="logo foguete.svg" alt="logo foguete">
+            <h1>
+                <span class="to">to</span><span class="do">do</span>
+            </h1>
+        </div>
+    </div>
+    <!--Input + botão-->
+    <div class="box">
+        <div class="inputbox">
+            <input class="input" type="text" placeholder="Adicione uma nova tarefa">
+            <button class="btn-add">Criar
+                <img class="icon+" src="icon+.svg" alt="botao">
+            </button>
+        </div>
+    </div>
+    <!--Lista das tarefas-->
+    <div class="box-tasks">
+        <div class="task-title">
+            <span class="tasks">Tarefas criadas<span class="counter">0</span></span>
+            <span class="done">Concluídas<span class="counter">0</span></span>
+        </div>
+        <!--Add uma tarefa-->
+        <div class="task-list"></div>
+        <!--Sem tarefas-->
+        <div class="empty">
+            <img src="Clipboard.svg" alt="ícone de tarefas">
+            <p class="empty-title">Você ainda não tem tarefas cadastradas</p>
+            <h2 class="empty-subtitle">Crie tarefas e organze seus itens a fazer</h2>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
