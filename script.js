@@ -6,7 +6,12 @@ const b = document.querySelectorAll('.btn-add')
 b.forEach(function(button){
     button.addEventListener('click', function(){
        let text = document.querySelector('.input').value
-       console.log(text) 
+       if (text.trim() === '') {
+    return;
+}
+
+//para apagar oq está escrito depois de criar a tarefa
+       document.querySelector('.input').value = ''
 
 //adiciona a tarefa na tela e o botão de excluir
        let newTask = document.createElement('div')
