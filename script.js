@@ -20,6 +20,13 @@ b.forEach(function(button){
        check.classList.add('check')
        let taskText = document.createElement('p')
        taskText.textContent = text
+//bolinha seleciona e deseleciona a tarefa
+       check.addEventListener('click', function () {
+       taskText.classList.toggle('checked')
+       let doneCounter = document.querySelector('.done .counter')
+       let totalDone = document.querySelectorAll('.task-list .checked').length
+       doneCounter.textContent = totalDone
+})
        let bd = document.createElement('button')
        bd.textContent = 'Excluir'
        
