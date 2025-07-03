@@ -11,11 +11,11 @@ b.forEach(function(button){
 //adiciona a tarefa na tela e o botão de excluir
        let newTask = document.createElement('div')
        newTask.textContent = text
-       let list = document.querySelector('.task-list')
-       list.appendChild(newTask)
        let bd = document.createElement('button')
        bd.textContent = 'Excluir'
        newTask.appendChild(bd)
+       let list = document.querySelector('.task-list')
+       list.appendChild(newTask)
 
 //contador muda quando adicionar a tarefa
        let c = document.querySelector('.tasks .counter')
@@ -25,7 +25,17 @@ b.forEach(function(button){
 //tira a div de empty quando adiciona uma tarefa
        let empty = document.querySelector('.empty')
        empty.style.display = "none"
-
+       
+//logica para apagar a tarefa    
+       bd.addEventListener('click', function(){
+           newTask.remove()
+           let tasks = document.querySelectorAll('.task-list div')
+           c.textContent = tasks.length
+       
+           if (tasks.length === 0) {
+               empty.style.display = 'flex'
+           }
+       })
     })
 })
 
